@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Animation Box</title>
 
 <style>
@@ -27,7 +28,7 @@ overflow:hidden;
 .round{
 width:50px;
 height:50px;
-background:brown;
+background:rgb(62,35,25);
 border-radius:50%;
 position:absolute;
 animation:zigzagLine 3s infinite linear;
@@ -35,10 +36,13 @@ animation:zigzagLine 3s infinite linear;
 
 @keyframes zigzagLine{
 
-0%{left:0; top:10%; background:brown;}
-30%{left:30%; top:80%;}
-60%{left:60%; top:30%; background:orange;}
+0%{left:0; top:10%;}
+15%{left:15%; top:80%;}
+30%{left:30%; top:30%;}
+45%{left:45%; top:80%;}
+60%{left:60%; top:30%;}
 75%{left:75%; top:80%; background:aqua;}
+85%{left:85%; top:30%;}
 100%{left:100%; top:80%;}
 
 }
