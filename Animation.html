@@ -34,7 +34,13 @@ position:absolute;
 animation:zigzagLine 3s infinite linear;
 }
 
-
+@keyframes zigzagLine{
+0%{transform:translate(0,40px);}
+25%{transform:translate(200px,300px);}
+50%{transform:translate(400px,50px);}
+75%{transform:translate(600px,300px);}
+100%{transform:translate(900px,40px);}
+}
 
 </style>
 </head>
