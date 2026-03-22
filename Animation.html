@@ -31,55 +31,23 @@ overflow:hidden;
 .round{
 width:50px;
 height:50px;
-background:rgb(62,35,25);
+background:brown;
 border-radius:50%;
 position:absolute;
 animation:zigzagLine 3s infinite linear;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
-}
-
-.round:hover{
-animation-play-state:paused;
-cursor:pointer;
-}
-
-/* Different animation delays */
-
-.delay1{
-background:red;
-animation-delay:1s;
-}
-
-.delay2{
-background:blue;
-animation-delay:2s;
 }
 
 @keyframes zigzagLine{
-
 0%{transform:translate(0,40px);}
-
 25%{transform:translate(200px,300px);}
-
 50%{transform:translate(400px,50px);}
-
 75%{transform:translate(600px,300px);}
-
 100%{transform:translate(900px,40px);}
-
 }
 
 button{
 padding:10px 20px;
-border:none;
-background:#333;
-color:white;
 cursor:pointer;
-border-radius:5px;
-}
-
-button:hover{
-background:#555;
 }
 
 </style>
@@ -89,25 +57,19 @@ background:#555;
 
 <div class="container">
 <div class="round"></div>
-<div class="round delay1"></div>
-<div class="round delay2"></div>
 </div>
 
-<button onclick="slow()">Slow</button>
-<button onclick="fast()">Fast</button>
+<button onclick="start()">Start</button>
+<button onclick="stop()">Stop</button>
 
 <script>
 
-function slow(){
-document.querySelectorAll('.round').forEach(ball=>{
-ball.style.animationDuration="6s";
-});
+function start(){
+document.querySelector('.round').style.animationPlayState="running";
 }
 
-function fast(){
-document.querySelectorAll('.round').forEach(ball=>{
-ball.style.animationDuration="2s";
-});
+function stop(){
+document.querySelector('.round').style.animationPlayState="paused";
 }
 
 </script>
