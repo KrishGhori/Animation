@@ -10,14 +10,17 @@
 body{
 background:#f0f0f0;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
 height:100vh;
 margin:0;
+gap:20px;
 }
 
 .container{
 width:90%;
+max-width:900px;
 height:400px;
 background:#e0e0e0;
 border:2px solid #ccc;
@@ -32,22 +35,52 @@ background:rgb(62,35,25);
 border-radius:50%;
 position:absolute;
 animation:zigzagLine 3s infinite linear;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
 .round:hover{
-animation-play-state: paused;
+animation-play-state:paused;
 cursor:pointer;
 }
 
-@keyframes zigzagLine{
-0%{transform:translate(0,40px);}
-25%{transform:translate(200px,300px);}
-50%{transform:translate(400px,50px);}
-75%{transform:translate(600px,300px);}
-100%{transform:translate(900px,40px);}
+/* Different animation delays */
+
+.delay1{
+background:red;
+animation-delay:1s;
 }
 
+.delay2{
+background:blue;
+animation-delay:2s;
+}
 
+@keyframes zigzagLine{
+
+0%{transform:translate(0,40px);}
+
+25%{transform:translate(200px,300px);}
+
+50%{transform:translate(400px,50px);}
+
+75%{transform:translate(600px,300px);}
+
+100%{transform:translate(900px,40px);}
+
+}
+
+button{
+padding:10px 20px;
+border:none;
+background:#333;
+color:white;
+cursor:pointer;
+border-radius:5px;
+}
+
+button:hover{
+background:#555;
+}
 
 </style>
 </head>
@@ -59,17 +92,24 @@ cursor:pointer;
 <div class="round delay1"></div>
 <div class="round delay2"></div>
 </div>
+
 <button onclick="slow()">Slow</button>
 <button onclick="fast()">Fast</button>
 
 <script>
+
 function slow(){
-document.querySelector('.round').style.animationDuration="6s";
+document.querySelectorAll('.round').forEach(ball=>{
+ball.style.animationDuration="6s";
+});
 }
 
 function fast(){
-document.querySelector('.round').style.animationDuration="2s";
+document.querySelectorAll('.round').forEach(ball=>{
+ball.style.animationDuration="2s";
+});
 }
+
 </script>
 
 </body>
