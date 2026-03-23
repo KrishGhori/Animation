@@ -36,7 +36,21 @@ position:absolute;
 
 <div class="container" onclick="createBall(event)"></div>
 
+<script>
 
+function createBall(e){
+
+const ball=document.createElement("div");
+ball.className="ball";
+
+ball.style.left=e.offsetX+"px";
+ball.style.top=e.offsetY+"px";
+
+document.querySelector(".container").appendChild(ball);
+
+}
+
+</script>
 
 </body>
 </html>
