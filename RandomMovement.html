@@ -39,7 +39,24 @@ position:absolute;
 <div class="round"></div>
 </div>
 
+<script>
 
+const ball=document.querySelector(".round");
+const box=document.querySelector(".container");
+
+function moveRandom(){
+
+const x=Math.random()*(box.clientWidth-40);
+const y=Math.random()*(box.clientHeight-40);
+
+ball.style.left=x+"px";
+ball.style.top=y+"px";
+
+}
+
+setInterval(moveRandom,500);
+
+</script>
 
 </body>
 </html>
