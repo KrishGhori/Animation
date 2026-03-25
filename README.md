@@ -8,3 +8,20 @@ The animation includes interactive features like starting/stopping movement, ran
 ---
 
 
+##  Features
+
+* Start and Stop animation
+* Ball trail / glow effect
+* Random ball movement
+* Click to create new balls
+* Gravity bounce animation
+
+---
+
+##  Technologies Used
+
+* HTML5
+* CSS3 (Animations & Keyframes)
+* JavaScript (DOM Manipulation & Events)
+
+---
