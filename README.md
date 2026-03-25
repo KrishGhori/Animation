@@ -58,13 +58,13 @@ project-folder
 
 ---
 
-## 📷 Example
+##  Example
 
 A ball moves in zigzag/random paths and reacts to user interactions such as clicks and control buttons.
 
 ---
 
-## 📖 Learning Purpose
+##  Learning Purpose
 
 This project helps in understanding:
 
